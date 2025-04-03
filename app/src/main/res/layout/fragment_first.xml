@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="nextFragment"
     tools:context=".FirstFragment">
 
     <EditText
@@ -23,8 +24,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="125dp"
-        android:layout_height="72dp"
+        android:layout_width="181dp"
+        android:layout_height="61dp"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="246dp"
         android:text="NextFragment"
