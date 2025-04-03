@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import yusufs.turan.fragmentexample.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -32,7 +33,9 @@ class FirstFragment : Fragment() {
     }
 
     fun nextFragment(view: View){
-
+        val name=binding.editText.text.toString()
+        val action=FirstFragmentDirections.actionFirstFragmentToSecondFragment(name)
+        Navigation.findNavController(view).navigate(action)
     }
     override fun onDestroyView() {
         super.onDestroyView()

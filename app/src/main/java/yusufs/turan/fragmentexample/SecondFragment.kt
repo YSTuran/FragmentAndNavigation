@@ -27,5 +27,14 @@ class SecondFragment : Fragment() {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        arguments?.let {
+            val recievedName=SecondFragmentArgs.fromBundle(it).userName
+            binding.textView.text="Hello, $recievedName"
+        }
+    }
+
 
 }
